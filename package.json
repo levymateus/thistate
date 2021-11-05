@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "levymateusmacedo@gmail.com",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "peerDependencies": {
+    "react": "^16.8.0"
+  }
 }
