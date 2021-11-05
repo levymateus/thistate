@@ -1,0 +1,9 @@
+{
+  "name": "thistate",
+  "version": "0.1.0",
+  "description": "global react state manager",
+  "main": "index.js",
+  "author": "levymateusmacedo@gmail.com",
+  "license": "MIT",
+  "private": true
+}
