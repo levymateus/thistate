@@ -4,11 +4,12 @@
   "description": "global react state manager",
   "main": "./src/index.js",
   "author": "levymateusmacedo@gmail.com",
+  "keywords": ["react", "state manager"],
   "repository": {
     "url": "https://github.com/levymateus/thistate"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "peerDependencies": {
     "react": "^16.8.0"
   }
