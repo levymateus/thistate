@@ -2,8 +2,6 @@
 Thistate is a custom React hook that can manage states globally in the application.
 <br/><br/>
 
-**This hook works in micro-frontend enviroments!!!**
-
 ## Documentation
 
 To use thistate follow the documentation to the some methods.
@@ -87,3 +85,6 @@ function Display({ listen }) {
   return <h2>{value}</h2>
 }
 ```
+
+See the example above live in CodeSandbox:
+https://codesandbox.io/s/thistate-simple-example-23uns
