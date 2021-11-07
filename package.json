@@ -1,6 +1,6 @@
 {
   "name": "thistate",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "global react state manager",
   "main": "./src/index.js",
   "author": "levymateusmacedo@gmail.com",
