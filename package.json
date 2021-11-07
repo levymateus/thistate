@@ -2,7 +2,7 @@
   "name": "thistate",
   "version": "0.1.0",
   "description": "global react state manager",
-  "main": "index.js",
+  "main": "./src/index.js",
   "author": "levymateusmacedo@gmail.com",
   "repository": {
     "url": "https://github.com/levymateus/thistate"
@@ -11,11 +11,5 @@
   "private": true,
   "peerDependencies": {
     "react": "^16.8.0"
-  },
-  "scripts": {
-    "build": "webpack --node-env production --mode production --config ./.config/webpack.config.js"
-  },
-  "devDependencies": {
-    "webpack": "^5.62.1"
   }
 }
