@@ -1,6 +1,7 @@
-# thistate :earth_americas:
-Thistate is a custom React hook that can manage states globally in the application.
-<br/><br/>
+# thistate &middot; ![npm](https://img.shields.io/npm/v/thistate) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/levymateus/thistate)
+
+Thistate is a library to manage global states with custom React hooks.
+<br/>
 
 ## Documentation
 
@@ -32,6 +33,18 @@ function create({ key, defaultValue })
 ---
 
 ## How to use
+
+First of all it is necessary to install the lib in your project with the following lines.
+
+If you using npm
+```
+npm i thistate
+```
+
+If you using yarn
+```
+yarn add thistate
+```
 
 To use thistate is really simple, just use 2 functions, `create` and `useState` (from thistate import both).
 
