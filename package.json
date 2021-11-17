@@ -4,6 +4,8 @@
   "description": "global react state manager",
   "main": "./src/index.js",
   "author": "levymateusmacedo@gmail.com",
+  "license": "MIT",
+  "private": false,
   "keywords": [
     "react",
     "state manager"
@@ -11,9 +13,18 @@
   "repository": {
     "url": "https://github.com/levymateus/thistate"
   },
-  "license": "MIT",
-  "private": false,
   "peerDependencies": {
     "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "babel-jest": "^27.3.1",
+    "jest": "^27.3.1"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
