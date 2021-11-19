@@ -1,4 +1,4 @@
-# thistate &middot; ![npm](https://img.shields.io/npm/v/thistate) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/levymateus/thistate) ![AppVeyor tests (branch)](https://img.shields.io/appveyor/tests/levymateus/thistate/master)
+# thistate &middot; ![npm](https://img.shields.io/npm/v/thistate) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/levymateus/thistate)
 
 Thistate is a library to manage global states with custom React hooks.
 <br/>

@@ -16,14 +16,14 @@ export function getStore (): Store {
   return global.store as Store
 }
 
-type StateProps = { key: string, defaultValue: any }
+type StateProps<StateType = any> = { key: string, defaultValue: StateType }
 
 /**
  * Create an state entry on the store.
  * @param {{ key: string, defaultValue: any }} param0 - the creation properties.
  * @returns an `StateListener`
  */
-export function create<StateType>({ key, defaultValue }: StateProps): StateListener<StateType> {
+export function create<StateType>({ key, defaultValue }: StateProps<StateType>): StateListener<StateType> {
   const store = getStore()
   return store.put<StateType>(key, defaultValue)
 }
