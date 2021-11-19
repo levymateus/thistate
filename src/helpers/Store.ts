@@ -89,7 +89,7 @@ class Store {
     return value
   }
 
-  get(key: string) {
+  get(key: string): StateListener<any> | undefined {
     return this.#value.get(key)
   }
 

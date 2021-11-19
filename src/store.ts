@@ -1,4 +1,4 @@
-import Store from './helpers/Store'
+import Store, { StateListener } from './helpers/Store'
 
 type GlobalThis = { store?: null | Store }
 
@@ -23,16 +23,16 @@ type StateProps = { key: string, defaultValue: any }
  * @param {{ key: string, defaultValue: any }} param0 - the creation properties.
  * @returns an `StateListener`
  */
-export function create({ key, defaultValue }: StateProps) {
+export function create<StateType>({ key, defaultValue }: StateProps): StateListener<StateType> {
   const store = getStore()
-  return store.put(key, defaultValue)
+  return store.put<StateType>(key, defaultValue)
 }
 
 /**
  * Retriveve the `StateListener` by key.
  * @param {string} key - the state key in the store.
  */
-export function get(key: string) {
+export function get(key: string): StateListener<any> | undefined {
   const store = getStore()
   return store.get(key)
 }

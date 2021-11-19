@@ -1,4 +1,4 @@
-# thistate &middot; ![npm](https://img.shields.io/npm/v/thistate) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/levymateus/thistate)
+# thistate &middot; ![npm](https://img.shields.io/npm/v/thistate) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/levymateus/thistate) ![AppVeyor tests (branch)](https://img.shields.io/appveyor/tests/levymateus/thistate/master)
 
 Thistate is a library to manage global states with custom React hooks.
 <br/>
@@ -11,8 +11,8 @@ To use thistate follow the documentation to the some methods.
 
 Returns a statefull value and function to update it.<br/>
 
-```javascript
-function useState(initializer)
+```typescript
+function useState<StateType>(initializer)
 ```
 
 `initializer` - Is a key or an observable state.<br/><br/>
@@ -23,12 +23,12 @@ function useState(initializer)
 
 Create an state entry on the store.<br/>
 
-```javascript
-function create({ key, defaultValue })
+```typescript
+function create<StateType>({ key, defaultValue }): StateListener<StateType>
 ```
 
-`key: string` - Is the key of the state.<br/>
-`defaultValue: any` - Is the initial value of the state.<br/><br/>
+`key` - Is the key of the state.<br/>
+`defaultValue` - Is the initial value of the state.<br/><br/>
 
 ---
 

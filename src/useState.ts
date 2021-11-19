@@ -7,7 +7,7 @@ import { get } from './store'
  * Returns a statefull value and function to update it.
  * @param {StateListener|string} initializer - a key or an observable state.
  */
-export function useState<StateType>(initializer: StateListener<StateType>) {
+export function useState<StateType>(initializer: StateListener<StateType> | string) {
   let globalState: StateListener<StateType> | null | undefined = null
 
   if (!initializer) {
