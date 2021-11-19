@@ -3,27 +3,30 @@
  * Observable interface.
  */
 export class Observer {
-  update(subject) {
-    return subject
+  update(observable: Observable): void {
+    return void observable
   }
 }
 
 /**
- * Subject abstract class.
+ * Observable abstract class.
  */
-export class Subject {
+export class Observable {
 
-  #observers
+  #observers: Observer[]
 
   constructor() {
     this.#observers = new Array();
   }
 
-  sub(observer) {
+  sub<T extends Observer>(observer: T): void {
     this.#observers.push(observer)
   }
 
-  notify() {
+  /**
+   * Notify all observers.
+   */
+  notify(): void {
     this.#observers.forEach((observer) => {
       observer.update(this)
     })

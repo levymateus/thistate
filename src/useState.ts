@@ -7,8 +7,8 @@ import { get } from './store'
  * Returns a statefull value and function to update it.
  * @param {StateListener|string} initializer - a key or an observable state.
  */
-export function useState(initializer) {
-  let globalState = null
+export function useState<StateType>(initializer: StateListener<StateType>) {
+  let globalState: StateListener<StateType> | null | undefined = null
 
   if (!initializer) {
     throw new TypeError('Invalid arguments')
@@ -29,25 +29,31 @@ export function useState(initializer) {
 
   const initialState = globalState.value
 
-  const [state, setState] = React.useState(initialState)
+  const [state, setState] = React.useState<StateType>(initialState)
 
   const set = React.useCallback((value) => {
-   globalState.value = value
+    if (globalState) {
+      globalState.value = value
+    }
   },[])
 
   React.useEffect(() => {
     let unmount = false
 
-    const handleEvent = state => {
+    const handleEvent = (state: StateType) => {
       if (!unmount) {
-        setState(state.value)
+        setState(state)
       }
     }
 
-    globalState.addEventListener(handleEvent)
+    if (globalState) {
+      globalState.addEventListener(handleEvent)
+    }
 
     return () => {
-      globalState.removeEventListener(handleEvent)
+      if (globalState) {
+        globalState.removeEventListener(handleEvent)
+      }
       unmount = true
     }
   }, [])
